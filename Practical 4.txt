@@ -1,0 +1,109 @@
+# Practical 4 – Display 10 Student Names
+
+## Aim
+
+To create an Angular application to display 10 student names using an array.
+
+## Objective
+
+To understand how an array is created in Angular and how student names can be displayed on a web page.
+
+## Technologies Used
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Visual Studio Code
+
+## 1. app.ts
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+
+  students = [
+    'Aarti',
+    'Akshata',
+    'Aishwarya',
+    'Gauri',
+    'Bhumika',
+    'Pooja',
+    'Rohit',
+    'Rushi',
+    'Pallavi',
+    'Aditya'
+  ];
+}
+
+##2. app.html
+<div class="container">
+
+  <h1>Student Names</h1>
+
+  <ol>
+    <li>{{ students[0] }}</li>
+    <li>{{ students[1] }}</li>
+    <li>{{ students[2] }}</li>
+    <li>{{ students[3] }}</li>
+    <li>{{ students[4] }}</li>
+    <li>{{ students[5] }}</li>
+    <li>{{ students[6] }}</li>
+    <li>{{ students[7] }}</li>
+    <li>{{ students[8] }}</li>
+    <li>{{ students[9] }}</li>
+  </ol>
+
+</div>
+
+##3. app.css
+.container {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  width: 50%;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+ol {
+  text-align: left;
+  width: 50%;
+  margin: auto;
+}
+
+li {
+  font-size: 18px;
+  padding: 5px;
+}
+
+##Program
+
+The Angular application stores 10 student names in an array and displays the names on the web page using Angular data binding.
+
+##Output
+
+     Student Names
+
+1.Aarti
+2.Akshata
+3.Aishwarya
+4.Gauri
+5.Bhumika
+6.Pooja
+7.Rohit
+8.Rushi
+9.Pallavi
+10.Aditya
+
+##Conclusion
+
+Thus, 10 student names were successfully stored in an array and displayed using an Angular application.
